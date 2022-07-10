@@ -25,6 +25,6 @@ require __DIR__.'/auth.php';
 
 Route::prefix('/admin')->group(function() {
     Route::get('/',function() {
-        return view('backend.layouts.main');
+        return view('backend.dashboard');
     });
 });
