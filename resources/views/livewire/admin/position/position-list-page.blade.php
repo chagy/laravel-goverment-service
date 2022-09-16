@@ -60,7 +60,10 @@
                         @if (!$item->deleted_at)
                             <button 
                                 type="button" 
-                                class="btn btn-sm btn-outline-warning">
+                                class="btn btn-sm btn-outline-warning" 
+                                data-toggle="modal" 
+                                data-target="#modal-form" 
+                                wire:click="$emit('positionEdit',{{ $item->id }})">
                                 <i class="fas fa-edit"></i> แก้ไข
                             </button>
                         @endif
