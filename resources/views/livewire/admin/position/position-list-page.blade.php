@@ -8,9 +8,11 @@
             <div class="input-group input-group-sm" style="width: 250px;">
               <input 
                 type="text" 
-                name="table_search" 
+                name="search" 
                 class="form-control float-right" 
-                placeholder="Search">
+                placeholder="Search" 
+                id="search"
+                wire:model="search">
 
               <div class="input-group-append">
                 <button type="submit" class="btn btn-default">
