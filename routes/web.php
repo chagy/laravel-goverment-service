@@ -23,8 +23,12 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::prefix('/admin')->group(function() {
+Route::prefix('/admin')
+    // ->middleware(['auth'])
+    ->group(function() {
     Route::get('/',function() {
         return view('backend.dashboard');
     });
+
+    Route::get('/position',App\Http\Livewire\Admin\Position\PositionListPage::class)->name('position.list.page');
 });

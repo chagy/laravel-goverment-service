@@ -22,7 +22,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-header">SETTING</li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{!! route('position.list.page') !!}" class="nav-link">
                     <i class="nav-icon fas fa-crown text-warning"></i>
                     <p>
                         ตำแหน่ง
