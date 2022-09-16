@@ -3,6 +3,9 @@
 <div wire:ignore.self class="modal fade" id="modal-form">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
+        <div wire:loading.class="overlay" wire:loading.flex wire:target="save">
+          <i class="fas fa-2x fa-sync fa-spin"></i>
+        </div>
         <div class="modal-header">
           <h4 class="modal-title">ข้อมูลตำแหน่ง</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
