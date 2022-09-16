@@ -13,6 +13,10 @@ class PositionListPage extends Component
     protected $paginationTheme = 'bootstrap';
 
     public $search;
+
+    protected $listeners = [
+        'positionListRefresh' => '$refresh'
+    ];
     
     public function render()
     {

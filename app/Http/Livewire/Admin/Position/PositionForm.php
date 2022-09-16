@@ -12,7 +12,8 @@ class PositionForm extends Component
     public $posi_desc;
 
     protected $listeners = [
-        'positionEdit' => 'edit'
+        'positionEdit' => 'edit',
+        'positionResetInput' => 'resetInput'
     ];
 
     protected $messages = [
@@ -58,6 +59,18 @@ class PositionForm extends Component
                 'posi_desc' => $this->posi_desc,
             ]
         );
+
+        $this->resetInput();
+
+        $this->emit('modalBootstrap');
+        $this->emit('positionListRefresh');
+    }
+
+    public function resetInput()
+    {
+        $this->reset('idKey');
+        $this->reset('posi_name');
+        $this->reset('posi_desc');
     }
 
     public function render()

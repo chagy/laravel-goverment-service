@@ -59,5 +59,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 @livewireScripts
 
 @stack('scriptjs')
+
+<script>
+  window.livewire.on("modalBootstrap",() => {
+    $(".modal").modal("hide");
+  })
+</script>
 </body>
 </html>

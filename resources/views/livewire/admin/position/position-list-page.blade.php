@@ -37,7 +37,8 @@
                     type="button" 
                     class="btn btn-sm btn-primary" 
                     data-toggle="modal" 
-                    data-target="#modal-form">
+                    data-target="#modal-form" 
+                    wire:click="$emit('positionResetInput')">
                     <i class="fas fa-plus"></i> เพิ่มข้อมูล
                   </button>
                 </th>
