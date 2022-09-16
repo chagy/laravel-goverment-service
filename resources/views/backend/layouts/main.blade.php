@@ -14,6 +14,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('asset-admin/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="{{ asset('asset-admin/plugins/toastr/toastr.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('asset-admin/dist/css/adminlte.min.css') }}">
 
@@ -53,6 +55,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('asset-admin/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('asset-admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- Toastr -->
+<script src="{{ asset('asset-admin/plugins/toastr/toastr.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('asset-admin/dist/js/adminlte.min.js') }}"></script>
 
@@ -64,6 +68,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
   window.livewire.on("modalBootstrap",() => {
     $(".modal").modal("hide");
   })
+
+  window.addEventListener('toastr',function(e) {
+    let alertToastr;
+    if(e.detail.type == 'success') {
+      alertToastr = toastr.success(e.detail.message);
+    } else if(e.detail.type == 'info') {
+      alertToastr = toastr.info(e.detail.message);
+    } else if(e.detail.type == 'warning') {
+      alertToastr = toastr.warning(e.detail.message);
+    } else if(e.detail.type == 'danger') {
+      alertToastr = toastr.danger(e.detail.message);
+    }else{
+      alertToastr = toastr.danger(e.detail.message);
+    }
+    alertToastr;
+  })
+
+  
 </script>
 </body>
 </html>

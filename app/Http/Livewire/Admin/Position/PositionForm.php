@@ -64,6 +64,11 @@ class PositionForm extends Component
 
         $this->emit('modalBootstrap');
         $this->emit('positionListRefresh');
+
+        $this->dispatchBrowserEvent('toastr',[
+            'type' => 'success',
+            'message' => 'บันทึกข้อมูลตำแหน่งเรียบร้อย'
+        ]);
     }
 
     public function resetInput()
