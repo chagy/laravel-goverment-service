@@ -23,6 +23,7 @@
           </div>
         </div>
         <!-- /.card-header -->
+        @livewire('admin.position.position-form')
         <div class="card-body table-responsive p-0">
           <table class="table table-hover text-nowrap">
             <thead>
@@ -31,7 +32,15 @@
                 <th>ชื่อตำแหน่ง</th>
                 <th>รายละเอียด</th>
                 <th>สถานะ</th>
-                <th>#</th>
+                <th class="text-center">
+                  <button 
+                    type="button" 
+                    class="btn btn-sm btn-primary" 
+                    data-toggle="modal" 
+                    data-target="#modal-form">
+                    <i class="fas fa-plus"></i> เพิ่มข้อมูล
+                  </button>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -47,7 +56,7 @@
                             <span class="badge bg-success">ใช้งาน</span>
                         @endif
                     </td>
-                    <td>
+                    <td class="text-center">
                         @if (!$item->deleted_at)
                             <button 
                                 type="button" 
