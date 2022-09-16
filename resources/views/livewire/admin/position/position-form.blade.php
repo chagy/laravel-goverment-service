@@ -1,6 +1,6 @@
 <div>
 <form wire:submit.prevent="save">
-<div class="modal fade" id="modal-form" wire:ignore.selt>
+<div wire:ignore.self class="modal fade" id="modal-form">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -17,8 +17,13 @@
                     id="posi_name"
                     name="posi_name"
                     placeholder="กรอก ชื่อตำแหน่ง"
-                    class="form-control" 
+                    class="form-control @error('posi_name') is-invalid @enderror" 
                     wire:model="posi_name"/>
+                @error('posi_name')
+                <div class="error invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="posi_desc">รายละเอียด</label>
