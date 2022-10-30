@@ -23,7 +23,7 @@
           </div>
         </div>
         <!-- /.card-header -->
-        {{-- @livewire('admin.province.province-form') --}}
+        @livewire('admin.province.province-form')
         <div class="card-body table-responsive p-0">
           <table class="table table-hover text-nowrap">
             <thead>
