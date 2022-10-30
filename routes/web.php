@@ -32,4 +32,5 @@ Route::prefix('/admin')
 
     Route::get('/position',App\Http\Livewire\Admin\Position\PositionListPage::class)->name('position.list.page');
     Route::get('/department',App\Http\Livewire\Admin\Department\DepartmentListPage::class)->name('department.list.page');
+    Route::get('/province',App\Http\Livewire\Admin\Province\ProvinceListPage::class)->name('province.list.page');
 });
