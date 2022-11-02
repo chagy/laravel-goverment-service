@@ -21,7 +21,7 @@ return new class extends Migration
                 ->on('districts')
                 ->cascadeOnDelete();
             $table->string('subd_name')->comment('ชื่อตำบล');
-            $table->text('subd_desc')->comment('รายละเอียด');
+            $table->text('subd_desc')->nullable()->comment('รายละเอียด');
             $table->string('subd_zipcode')->comment('รหัสไปษรณีย์');
             $table->timestamps();
             $table->softDeletes();

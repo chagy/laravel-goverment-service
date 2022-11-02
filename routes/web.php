@@ -34,4 +34,5 @@ Route::prefix('/admin')
     Route::get('/department',App\Http\Livewire\Admin\Department\DepartmentListPage::class)->name('department.list.page');
     Route::get('/province',App\Http\Livewire\Admin\Province\ProvinceListPage::class)->name('province.list.page');
     Route::get('/district',App\Http\Livewire\Admin\District\DistrictListPage::class)->name('district.list.page');
+    Route::get('/sub-district',App\Http\Livewire\Admin\SubDistrict\SubDistrictListPage::class)->name('sub.district.list.page');
 });
